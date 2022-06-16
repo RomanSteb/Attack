@@ -11,7 +11,7 @@ But why Russian narratives about its military forces were so successful that eve
 
 **What are the narratives on war?**
 
-![](images/035e481-yaderna-zbroya-rf690.jpg)
+![](images/photo_2022-06-17_02-03-21.jpg){width="534"}
 
 Nuclear Weapon matters. Having a nuclear rockets, the state can demonstrate its power and ability to make catastropihcal devasttions. The logic of Cold War continues to formulate the security politics.
 
@@ -25,7 +25,7 @@ Nevertheless, Russia continues this devastating war even under economical sancti
 
 ![Forbes.com](images/paste-B5FFC894.png){alt="Forbes.com" width="530"}
 
-Another evidence that confirm the usage of Soviet military equipment is Russian losses in Ukraine, documented by analysits of [Oryx](https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html). Analysts mentioned that 4344 military equipment of RAF were damaged, destroyed or captured since 24 February.
+Another evidence that confirm the usage of Soviet military equipment is Russian losses in Ukraine, documented by analysts of [Oryx](https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html). Analysts mentioned that 4344 military equipment of RAF were damaged, destroyed or captured since 24 February.
 
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(warning=FALSE, message=FALSE)
@@ -53,7 +53,7 @@ read_xlsx("ExpendRU.xlsx") -> dataru
 read_xlsx("ExpendUSA.xlsx") -> datausa
 read_xlsx("ExpendUKR.xlsx") -> dataukr
 ggplot() + 
-  geom_smooth(data = dataru, aes(x = Year, y = Expend),colour = "cornflowerblue", size = 2) + geom_smooth(data = datausa, aes(x = Year, y = Expend),colour = "lightpink", size = 2) + geom_smooth(data = dataukr, aes(x = Year, y = Expand), colour = "gold", size = 2) + scale_y_continuous(labels = label_number(suffix = "B US $", scale = 1e-3))+ ggtitle("Military Expenditures: USA, Russia, Ukraine, billion dollars, SIPRI")
+  geom_smooth(data = dataru, aes(x = Year, y = Expend),colour = "cornflowerblue", size = 2) + geom_smooth(data = datausa, aes(x = Year, y = Expend),colour = "lightpink", size = 2) + geom_smooth(data = dataukr, aes(x = Year, y = Expand), colour = "gold", size = 2) + scale_y_continuous(labels = label_number(suffix = "B US $", scale = 1e-3))+ ggtitle("Military Expenditures USA, Russia, Ukraine, billion dollars, SIPRI")
 
 
 ```
