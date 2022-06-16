@@ -1,9 +1,9 @@
 ---
-title: "MAIN ATTACK"
+title: "Russian Myth on Its Superpower"
 ---
 
-| **Russian Military Equipment Losses in Ukraine 2022** |
-|-------------------------------------------------------|
+|     |
+|-----|
 
 In February 2022 Russia attacked Ukraine. Different experts in the West did not believe that Ukrainian Army was ready to fight Russian Army Forces and prognosed Ukraine to capitulate in a few days. Unexpectedly for western politicians and so-called experts Ukrainians were prepared to give a tough battle with "the second army in the world" and successfully stopped Russian troops from taking Kyiv - the capital of Ukraine.
 
@@ -21,7 +21,9 @@ However, Russian military forces appeared to be less powerful than Russian propa
 
 Nevertheless, Russia continues this devastating war even under economical sanctions. Despite claiming about new types of Russian T-90, which are transferring to Ministry of Defence from Russian factories, Russia has to reconserve more and more Soviet equipment.
 
-![![Forbes.com](images/paste-B5FFC894.png){width="530"}](images/paste-58624AB8.png){width="370"}
+![](images/paste-58624AB8.png){width="528"}
+
+![Forbes.com](images/paste-B5FFC894.png){alt="Forbes.com" width="530"}
 
 Another evidence that confirm the usage of Soviet military equipment is Russian losses in Ukraine, documented by analysits of [Oryx](https://www.oryxspioenkop.com/2022/02/attack-on-europe-documenting-equipment.html). Analysts mentioned that 4344 military equipment of RAF were damaged, destroyed or captured since 24 February.
 
@@ -36,6 +38,8 @@ mtext("Russian Military Equipment Losses in Ukraine 2022", side = 3, line = 1, c
 
 In May Russian tank-factory claimed that it sent a set of the newest Tanks - T-90M, however, during the war in Ukraine only one such tank was destroyed that might be an evidence that these tanks are not highly used for battles.
 
+![](images/zbytyj-litak-katapult.jpg){width="398"}
+
 **Russian technologies**
 
 Technologies and modernization cost a lot. However, SIPRI Military Expenditure Database shows that since 1991 Russian did not invest a lot in its Defense sector if we compare these expenditures with expenditures of United State.
@@ -49,7 +53,7 @@ read_xlsx("ExpendRU.xlsx") -> dataru
 read_xlsx("ExpendUSA.xlsx") -> datausa
 read_xlsx("ExpendUKR.xlsx") -> dataukr
 ggplot() + 
-  geom_smooth(data = dataru, aes(x = Year, y = Expend),colour = "cornflowerblue", size = 2) + geom_smooth(data = datausa, aes(x = Year, y = Expend),colour = "lightpink", size = 2) + geom_smooth(data = dataukr, aes(x = Year, y = Expand), colour = "gold", size = 2) + scale_y_continuous(labels = label_number(suffix = "B US $", scale = 1e-3))+ ggtitle("Military Expenditures, billion dollars")
+  geom_smooth(data = dataru, aes(x = Year, y = Expend),colour = "cornflowerblue", size = 2) + geom_smooth(data = datausa, aes(x = Year, y = Expend),colour = "lightpink", size = 2) + geom_smooth(data = dataukr, aes(x = Year, y = Expand), colour = "gold", size = 2) + scale_y_continuous(labels = label_number(suffix = "B US $", scale = 1e-3))+ ggtitle("Military Expenditures: USA, Russia, Ukraine, billion dollars, SIPRI")
 
 
 ```
